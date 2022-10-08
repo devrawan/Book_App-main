@@ -39,23 +39,6 @@ const Tabbs = ({navigation}, props ) => {
     
   return (
  
-    // <Tab.Navigator
-    // initialRouteName='HomeScreen'
-		// 	tabBarOptions={{
-		// 		activeTintColor: "black",
-		// 		inactiveTintColor: "#7380a1",
-		// 		labelStyle: {
-		// 			fontSize: 14,
-		// 		},
-    //             style:{
-                   
-    //                 height: 80,
-    //                 width: "100%",
-    //                 borderTopStartRadius: 5,
-    //                 borderTopEndRadius: 5,
-    //             }
-		// 	}}
-		// >
 
     <Tab.Navigator
     screenOptions={({ route }) => ({
