@@ -61,7 +61,7 @@ const renderItem = ({ item }) => (
           <View style={{marginBottom:3,padding:10,backgroundColor:'white',borderWidth:1,borderColor:'#CED4E3',width:60,height:60,justifyContent:'center',alignItems:'center',borderRadius:50}}> 
               <Image source={item.uri} style={{backgroundColor:'white',width:30,height:30,resizeMode:'contain'}}/>
          </View>
-         <View style={{height:"50%",width:"100%"}}>
+         <View style={{height:"50%",width:"100%",justifyContent:'center'}}>
          <Text style={{textAlign:'center',fontSize:16,fontFamily:"Cairo-SemiBold"}}>{item.title}</Text>
          </View>
         {/* <Text style={{textAlign:'center',fontSize:16,marginTop:10,paddingVertical:5,fontFamily:"Cairo-SemiBold"}}>{item.title}</Text> */}
