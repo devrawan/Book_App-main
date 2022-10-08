@@ -20,6 +20,9 @@ import {images} from './../../constants/index';
 const ContactScreen  = () => {
     const {height, width} = useWindowDimensions();
 return(
+
+
+  //mm
     <View style={[styles.container,{ 
         width:width,height:height}]}>
           <ImageBackground source={images.image} style={{width:width,height:140,justifyContent:"flex-end",alignItems:'center',paddingBottom:30}}>
