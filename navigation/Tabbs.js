@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text, Image, TouchableOpacity,useWindowDimensions} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../src/Screens/HomeScreen';
@@ -35,13 +35,14 @@ const  HomeStackScreen = ()=> {
 const Tab = createBottomTabNavigator();
 const Tabbs = ({navigation}, props ) => {
 
-  
-    
+  const {height, width} = useWindowDimensions();
+
   return (
  
-
     <Tab.Navigator
+    initialRouteName='HomeScreen'
     screenOptions={({ route }) => ({
+      
       tabBarIcon: ({ focused, color}) => {
         let iconName;
         let txt ;
@@ -69,9 +70,15 @@ const Tabbs = ({navigation}, props ) => {
    activeTintColor: 'black',
    inactiveTintColor: 'gray',
    showLabel:false,
+   style:{
+    // backgroundColor:'pink',
+    height:height*0.09,
+    paddingHorizontal:10
+   }
 
  }}>
       <Tab.Screen
+      
           name="Call"
           component={ContactScreen}
    

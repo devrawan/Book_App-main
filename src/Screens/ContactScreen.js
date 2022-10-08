@@ -19,16 +19,34 @@ import {images} from './../../constants/index';
 
 const ContactScreen  = () => {
     const {height, width} = useWindowDimensions();
-return(
+  return(
 
+  <View style={[styles.container,{  width:width,height:height}]}>
 
-  //mm
-    <View style={[styles.container,{ 
-        width:width,height:height}]}>
-          <ImageBackground source={images.image} style={{width:width,height:140,justifyContent:"flex-end",alignItems:'center',paddingBottom:30}}>
+          {/* <View style={{
+          height : 170,
+              width : "100%",
+              transform : [ { scaleX : 2} ],
+              borderBottomStartRadius : 300,
+              borderBottomEndRadius : 300,
+              overflow : 'hidden',
+            
+              }}>
+            <View style={{ 
+              flex : 1,
+              transform : [ { scaleX : 0.7 } ],
+              backgroundColor : '#7380a1',
+              alignItems : 'center',
+              justifyContent : 'center'}}>
+                <Text style={{fontSize:25 ,color:'white',alignSelf:'center',fontFamily:'Cairo-Bold'}}> تواصل معنا </Text>
+            </View>
+        </View> */}
+  <ImageBackground source={images.image} style={{width:width,height:140,justifyContent:"flex-end",alignItems:'center',paddingBottom:30}}>
         <Text style={{fontSize:25 ,color:'white',alignSelf:'center',fontFamily:'Cairo-Bold'}}>تواصل معنا   </Text>
         </ImageBackground>
-          <View style={{paddingVertical:10,marginTop:40,width:"100%",lexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+
+
+          <View style={{paddingVertical:10,marginTop:20,width:"100%",lexDirection:'row',justifyContent:'center',alignItems:'center'}}>
             <Image source={images.ren} style={{width:220,height:220}}/>
           </View>
           <View style={{paddingVertical:15,marginTop:35,paddingHorizontal:20,width:'100%',flexDirection:'row',justifyContent:'flex-end'}}>
@@ -44,7 +62,9 @@ return(
 
           <Text style={{fontSize:18,textDecorationLine:'underline'}}>العنوان : المملكة العربية السعودية </Text>
           </View>
-          </View>
+           </View>
+        
+        
 )}
 
 export default ContactScreen;
@@ -58,4 +78,25 @@ const styles = StyleSheet.create({
       paddingHorizontal:20,
       // paddingBottom:30
     
-    }})
+    },
+    parent : {
+      height : '80%',
+      width : '100%',
+      transform : [ { scaleX : 2 } ],
+      borderBottomStartRadius : 200,
+      borderBottomEndRadius : 200,
+      overflow : 'hidden',
+  },
+  child : {
+      flex : 1,
+      transform : [ { scaleX : 0.5 } ],
+
+      backgroundColor : 'yellow',
+      alignItems : 'center',
+      justifyContent : 'center'
+  }
+  
+  
+  
+  
+  })

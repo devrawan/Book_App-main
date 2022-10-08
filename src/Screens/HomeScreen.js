@@ -17,8 +17,7 @@ import {
     Image
   } from 'react-native';
   import {images} from './../../constants/index'
-
-
+import Circle from 'react-native-svg'
 const Data =[
     {key: 0, title: 'التعريف بقطاع المقاولات',uri :images.not},
     {key: 1, title: 'متطلبات تاسيس منشات مقاولات ',uri :images.bank},
@@ -39,7 +38,7 @@ const Data =[
 
 const Hed =()=>{
   return (
-    <View style={{flexDirection:'row',justifyContent:'flex-end',alignItems:'center',marginTop:10,paddingEnd:10,paddingVertical:5}}>
+    <View style={{width:'100%',flexDirection:'row',justifyContent:'flex-end',alignItems:'center',marginTop:10,paddingHorizontal:10,paddingVertical:5}}>
     <Text style={{fontSize:20,color:'black',fontFamily:'Cairo-Bold'}}> الفهرس </Text>
 </View>
   )
@@ -60,7 +59,7 @@ const renderItem = ({ item }) => (
           <View style={{padding:10,backgroundColor:'white',borderWidth:1,borderColor:'#CED4E3',width:60,height:60,justifyContent:'center',alignItems:'center',borderRadius:50}}> 
               <Image source={item.uri} style={{backgroundColor:'white'}}/>
          </View>
-        <Text style={{textAlign:'center',fontSize:16,marginTop:10}}>{item.title}</Text>
+        <Text style={{textAlign:'center',fontSize:16,marginTop:10,paddingVertical:5,height:"50%"}}>{item.title}</Text>
     
          </View>
   ); 
@@ -75,8 +74,25 @@ const HomeScreen  = ({navigation}) => {
         <ImageBackground source={images.image} style={{width:width,height:140,justifyContent:"flex-end",alignItems:'center',paddingBottom:30}}>
         <Text style={{fontSize:25 ,color:'white',alignSelf:'center',fontFamily:'Cairo-Bold'}}>المقاولات  </Text>
         </ImageBackground>
-
+  {/* <View style={{
+          height : 170,
+              width : "100%",
+              transform : [ { scaleX : 2} ],
+              borderBottomStartRadius : 300,
+              borderBottomEndRadius : 300,
+              overflow : 'hidden',
+           
             
+              }}>
+            <View style={{ 
+              flex : 1,
+              transform : [ { scaleX : 0.7 } ],
+              backgroundColor : '#7380a1',
+              alignItems : 'center',
+              justifyContent : 'center'}}>
+                <Text style={{fontSize:20 ,color:'white',alignSelf:'center',fontFamily:'Cairo-Bold',marginTop:20}}>تواصل معنا </Text>
+            </View>
+        </View> */}
         <FlatList
         style={{  height:'90%',   width: "100%",    paddingBottom: 10,}}
         numColumns={2}
