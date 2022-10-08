@@ -19,21 +19,20 @@ import {
   import {images} from './../../constants/index'
 import Circle from 'react-native-svg'
 const Data =[
-    {key: 0, title: 'التعريف بقطاع المقاولات',uri :images.group3},
-    {key: 1, title: 'متطلبات تاسيس منشات مقاولات ',uri :images.not},
-    {key: 2, title: ' تراخيص مزاولة نشاط المقاولات  ',uri :images.business},
-    {key: 3, title: ' قواعد واجرات اساسية بشان التعاقد ',uri :images.filee},
-    {key: 4, title: 'الجهات العليا للمقاولات',uri :images.contract},
-    {key: 5, title: 'منصات الكترونبة في خدمة المقاول ',uri :images.filee},
-    {key: 6, title: 'خطة عمل المشروعات  المالية   ',uri :images.business},
-    {key: 7, title: 'اليات  تسليم مشروعات المقاولات ',uri :images.bank},
+    {key: 0, title: 'متطلبات تأسيس منشاة مقاولات',uri :images.group3},
+    {key: 1, title: 'التعريف بقطاع المقاولات',uri :images.not},
+    {key: 2, title: 'قواعد وإجراءات أساسية بشأن التعاقد',uri :images.business},
+    {key: 3, title: 'تراخيص مزاولة نشاط المقاولات',uri :images.filee},
+    {key: 4, title: 'منصات الكترونية في خدمة المقاول',uri :images.contract},
+    {key: 5, title: 'الجهات المختصة ذات العلاقات  ',uri :images.filee},
+    {key: 6, title: 'آليات تسليم مشاريع المقاولات',uri :images.business},
+    {key: 7, title: 'أنظمة عقود المقاولات',uri :images.bank},
     {key: 8, title: 'انظمة عقود المقاولات  ',uri :images.group3},
 
-    {key: 9, title: '  علاقة المقاول مع الزبون',uri :images.not},
-    {key: 10, title: '   لجنة المقاولات  ',uri :images.social},
-    {key: 11, title: '   لجنة الانجازات   ',uri :images.contract},
-    {key: 12, title: 'انظمة عقود المقاولات  ',uri :images.construction},
-    {key: 13, title: 'الجهات العليا للمقاولات',uri :images.not},
+    {key: 9, title: 'الجانب الاجتماعي والوطني',uri :images.not},
+    {key: 10, title: 'لجنة المقاولات رسالتها – إنجازاتها ',uri :images.social},
+    {key: 11, title:  'آليات تسليم مشاريع المقاولات' ,uri :images.contract},
+ 
 ]
 //Cairo-SemiBold
 const Hed =()=>{
@@ -49,7 +48,7 @@ const renderItem = ({ item }) => (
         marginVertical:5,
         backgroundColor:"white",
         height:160,
-        width:'45%',justifyContent:'center',alignItems:'center',paddingHorizontal:10,paddingVertical:10,borderRadius:12,shadowColor: "#000",
+        width:'45%',justifyContent:'center',alignItems:'center',paddingHorizontal:5,paddingVertical:10,borderRadius:12,shadowColor: "#000",
         shadowOffset: {
             width: 0,
             height: 4,
@@ -57,14 +56,16 @@ const renderItem = ({ item }) => (
         shadowOpacity: 0.32,
         shadowRadius: 5.46,
         elevation: 7}}>
+         <View style={{
+          // backgroundColor:'gray',
+         height:"50%",width:"100%",justifyContent:'center',justifyContent:'center',alignItems:'center'}}>
 
-          <View style={{marginBottom:3,padding:10,backgroundColor:'white',borderWidth:1,borderColor:'#CED4E3',width:60,height:60,justifyContent:'center',alignItems:'center',borderRadius:50}}> 
-              <Image source={item.uri} style={{backgroundColor:'white',width:30,height:30,resizeMode:'contain'}}/>
+          <View style={{marginBottom:7,borderWidth:1,borderColor:'#CED4E3',width:70,height:70,justifyContent:'center',alignItems:'center',borderRadius:50}}> 
+              <Image source={item.uri} style={{backgroundColor:'white',width:40,height:40,resizeMode:'contain'}}/>
          </View>
-         <View style={{height:"50%",width:"100%",justifyContent:'center'}}>
+        </View>
          <Text style={{textAlign:'center',fontSize:16,fontFamily:"Cairo-SemiBold"}}>{item.title}</Text>
-         </View>
-        {/* <Text style={{textAlign:'center',fontSize:16,marginTop:10,paddingVertical:5,fontFamily:"Cairo-SemiBold"}}>{item.title}</Text> */}
+       
     
          </View>
   ); 
@@ -99,6 +100,7 @@ const HomeScreen  = ({navigation}) => {
             </View>
         </View> */}
         <FlatList
+        centerContent={true}
         style={{  height:'90%',   width: "100%",    paddingBottom: 10,}}
         numColumns={2}
                     showsVerticalScrollIndicator={false}
@@ -122,9 +124,9 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor:"#E8E8E8",
       marginTop: 0,
-    //   justifyContent:'center',
+      justifyContent:'center',
       alignItems:'center',
-      paddingHorizontal:20,
+      paddingHorizontal:10,
       // paddingBottom:30
     
     }})
