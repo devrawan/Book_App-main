@@ -19,10 +19,10 @@ import {
   import {images} from './../../constants/index'
 import Circle from 'react-native-svg'
 const Data =[
-    {key: 0, title: 'التعريف بقطاع المقاولات',uri :images.not},
-    {key: 1, title: 'متطلبات تاسيس منشات مقاولات ',uri :images.bank},
+    {key: 0, title: 'التعريف بقطاع المقاولات',uri :images.group3},
+    {key: 1, title: 'متطلبات تاسيس منشات مقاولات ',uri :images.not},
     {key: 2, title: ' تراخيص مزاولة نشاط المقاولات  ',uri :images.business},
-    {key: 3, title: ' قواعد واجرات اساسية بشان التعاقد ',uri :images.construction},
+    {key: 3, title: ' قواعد واجرات اساسية بشان التعاقد ',uri :images.filee},
     {key: 4, title: 'الجهات العليا للمقاولات',uri :images.contract},
     {key: 5, title: 'منصات الكترونبة في خدمة المقاول ',uri :images.filee},
     {key: 6, title: 'خطة عمل المشروعات  المالية   ',uri :images.business},
@@ -35,7 +35,7 @@ const Data =[
     {key: 12, title: 'انظمة عقود المقاولات  ',uri :images.construction},
     {key: 13, title: 'الجهات العليا للمقاولات',uri :images.not},
 ]
-
+//Cairo-SemiBold
 const Hed =()=>{
   return (
     <View style={{width:'100%',flexDirection:'row',justifyContent:'flex-end',alignItems:'center',marginTop:10,paddingHorizontal:10,paddingVertical:5}}>
@@ -45,10 +45,11 @@ const Hed =()=>{
 }
 const renderItem = ({ item }) => (
     <View key={item.key} style={{
-        marginHorizontal:8,marginVertical:11,
+        marginHorizontal:8,
+        marginVertical:5,
         backgroundColor:"white",
-        height:150,
-        width:'45%',justifyContent:'center',alignItems:'center',paddingHorizontal:10,paddingVertical:20,borderRadius:12,shadowColor: "#000",
+        height:160,
+        width:'45%',justifyContent:'center',alignItems:'center',paddingHorizontal:10,paddingVertical:10,borderRadius:12,shadowColor: "#000",
         shadowOffset: {
             width: 0,
             height: 4,
@@ -56,10 +57,14 @@ const renderItem = ({ item }) => (
         shadowOpacity: 0.32,
         shadowRadius: 5.46,
         elevation: 7}}>
-          <View style={{padding:10,backgroundColor:'white',borderWidth:1,borderColor:'#CED4E3',width:60,height:60,justifyContent:'center',alignItems:'center',borderRadius:50}}> 
-              <Image source={item.uri} style={{backgroundColor:'white'}}/>
+
+          <View style={{marginBottom:3,padding:10,backgroundColor:'white',borderWidth:1,borderColor:'#CED4E3',width:60,height:60,justifyContent:'center',alignItems:'center',borderRadius:50}}> 
+              <Image source={item.uri} style={{backgroundColor:'white',width:30,height:30,resizeMode:'contain'}}/>
          </View>
-        <Text style={{textAlign:'center',fontSize:16,marginTop:10,paddingVertical:5,height:"50%"}}>{item.title}</Text>
+         <View style={{height:"50%",width:"100%"}}>
+         <Text style={{textAlign:'center',fontSize:16,fontFamily:"Cairo-SemiBold"}}>{item.title}</Text>
+         </View>
+        {/* <Text style={{textAlign:'center',fontSize:16,marginTop:10,paddingVertical:5,fontFamily:"Cairo-SemiBold"}}>{item.title}</Text> */}
     
          </View>
   ); 

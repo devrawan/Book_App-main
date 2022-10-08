@@ -12,7 +12,9 @@ const group3 = require('../assets/images/group3.png');
 const social = require('../assets/images/social.png');
 const ren = require('../assets/images/ren.png');
 const bor = require('../assets/images/bor.png');
+const money = require('../assets/images/money.png');
+const develop = require('../assets/images/develop.png');
 
 export default {
-  bor, ren, card1 ,group,image,not,bank,business,construction,contract,filee,group2,group3,social
+  develop,money,bor, ren, card1 ,group,image,not,bank,business,construction,contract,filee,group2,group3,social
 };
