@@ -63,7 +63,6 @@ const Tabbs = ({navigation}, props ) => {
         <Text style={{color:'black'}}>{txt}</Text>
           </View>
       )
-    //  return <Ionicons name={iconName} size={30} color={color}  />;
    },
  })}
  tabBarOptions={{
