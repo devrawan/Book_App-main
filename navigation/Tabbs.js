@@ -10,6 +10,7 @@ import ContactScreen from '../src/Screens/ContactScreen';
 import Iconn from 'react-native-vector-icons/Feather';
 import AboutIcon from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import HomeStack from './HomeStack';
 
 //Feather
 //phone-call
@@ -39,14 +40,14 @@ const Tabbs = ({navigation}, props ) => {
 
   return (
  
-    <Tab.Navigator
-    initialRouteName='HomeScreen'
-    screenOptions={({ route }) => ({
-      
+      <Tab.Navigator
+        initialRouteName='HomeScreen'
+        screenOptions={({ route }) => ({
+          
       tabBarIcon: ({ focused, color}) => {
         let iconName;
         let txt ;
-        
+
         if (route.name === 'Call') {
           iconName = focused  ? 'call-sharp'  : 'call-outline';
           txt ="اتصل بنا "
@@ -93,7 +94,7 @@ const Tabbs = ({navigation}, props ) => {
        
            <Tab.Screen
           name="HomeScreen"
-          component={HomeScreen}
+          component={HomeStack}
         />
           
       </Tab.Navigator>

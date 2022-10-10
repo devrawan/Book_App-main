@@ -23,30 +23,36 @@ const ContactScreen  = () => {
 
   <View style={[styles.container,{  width:width,height:height}]}>
 
-          {/* <View style={{
-          height : 170,
+<View style={{
+          height : 180,
               width : "100%",
               transform : [ { scaleX : 2} ],
               borderBottomStartRadius : 300,
               borderBottomEndRadius : 300,
               overflow : 'hidden',
-            
+               zIndex:1,
+              position:'absolute',
+               top:-20,
+               marginBottom:10
+               
               }}>
             <View style={{ 
-              flex : 1,
+          flex:1,
+              // zIndex:0,
               transform : [ { scaleX : 0.7 } ],
               backgroundColor : '#7380a1',
               alignItems : 'center',
-              justifyContent : 'center'}}>
-                <Text style={{fontSize:25 ,color:'white',alignSelf:'center',fontFamily:'Cairo-Bold'}}> تواصل معنا </Text>
+              justifyContent : 'flex-end'
+              }}>
+        <Text style={{fontSize:25 ,color:'white',alignSelf:'center',fontFamily:'Cairo-Bold',marginBottom:30}}>تواصل معنا   </Text>
             </View>
-        </View> */}
-  <ImageBackground source={images.image} style={{width:width,height:140,justifyContent:"flex-end",alignItems:'center',paddingBottom:30}}>
+        </View>
+  {/* <ImageBackground source={images.image} style={{width:width,height:140,justifyContent:"flex-end",alignItems:'center',paddingBottom:30}}>
         <Text style={{fontSize:25 ,color:'white',alignSelf:'center',fontFamily:'Cairo-Bold'}}>تواصل معنا   </Text>
-        </ImageBackground>
+        </ImageBackground> */}
 
 
-          <View style={{paddingVertical:10,marginTop:20,width:"100%",lexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+          <View style={{paddingVertical:10,marginTop:20,width:"100%",lexDirection:'row',justifyContent:'center',alignItems:'center',marginTop:180}}>
             <Image source={images.ren} style={{width:220,height:220}}/>
           </View>
           <View style={{paddingVertical:15,marginTop:35,paddingHorizontal:20,width:'100%',flexDirection:'row',justifyContent:'flex-end'}}>
