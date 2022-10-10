@@ -51,6 +51,7 @@ const ContactScreen  = () => {
         <Text style={{fontSize:25 ,color:'white',alignSelf:'center',fontFamily:'Cairo-Bold'}}>تواصل معنا   </Text>
         </ImageBackground> */}
 
+<ScrollView style={{paddingBottom:40}}>
 
           <View style={{paddingVertical:10,marginTop:20,width:"100%",lexDirection:'row',justifyContent:'center',alignItems:'center',marginTop:180}}>
             <Image source={images.ren} style={{width:220,height:220}}/>
@@ -68,6 +69,8 @@ const ContactScreen  = () => {
 
           <Text style={{fontSize:18,textDecorationLine:'underline'}}>العنوان : المملكة العربية السعودية </Text>
           </View>
+          </ScrollView>
+
            </View>
         
         

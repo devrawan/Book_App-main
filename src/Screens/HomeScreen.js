@@ -61,11 +61,12 @@ const {navigate} = useNavigation();
           }}
       key={item.key} 
       style={{
-          marginHorizontal:8,
-          marginVertical:5,
+    marginHorizontal:5,
+       alignSelf:'flex-end',
+         marginBottom:15,
           backgroundColor:"white",
           height:160,
-          width:'45%',justifyContent:'center',alignItems:'center',paddingHorizontal:5,paddingVertical:10,borderRadius:12,shadowColor: "#000",
+          width:'45%',justifyContent:'center',alignItems:'center',paddingHorizontal:8,paddingVertical:10,borderRadius:12,shadowColor: "#000",
           shadowOffset: {
               width: 0,
               height: 4,
@@ -125,9 +126,8 @@ const {navigate} = useNavigation();
             </View>
         </View>
   <FlatList
-       
-        centerContent={true}
-        style={{  height:'90%',   width: "100%",    paddingBottom: 10,paddingTop:160}}
+       centerContent= {true}
+       style={{     paddingBottom: 10,paddingTop:160 ,width:width,paddingHorizontal:10}}
         numColumns={2}
                     showsVerticalScrollIndicator={false}
                     data={Data}
