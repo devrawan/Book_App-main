@@ -1,111 +1,89 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {
-  ImageBackground,
-    Image,
+  Image,
   Text,
-  Pressable,
   View,
-  Keyboard,
-  SafeAreaView,
-  TouchableWithoutFeedback,
-  KeyboardAvoidingView,
   useWindowDimensions,
-  TouchableOpacity,
   StyleSheet,
-  StatusBar,
   ScrollView,
 } from 'react-native';
+import BoxText from '../components/BoxText';
 import {images} from './../../constants/index';
 
-const ContactScreen  = () => {
-    const {height, width} = useWindowDimensions();
-  return(
+const ContactScreen = () => {
+  const {height, width} = useWindowDimensions();
 
-  <View style={[styles.container,{  width:width,height:height}]}>
-
-<View style={{
-          height : 180,
-              width : "100%",
-              transform : [ { scaleX : 2} ],
-              borderBottomStartRadius : 300,
-              borderBottomEndRadius : 300,
-              overflow : 'hidden',
-               zIndex:1,
-              position:'absolute',
-               top:-20,
-               marginBottom:10
-               
-              }}>
-            <View style={{ 
-          flex:1,
-              // zIndex:0,
-              transform : [ { scaleX : 0.7 } ],
-              backgroundColor : '#7380a1',
-              alignItems : 'center',
-              justifyContent : 'flex-end'
-              }}>
-        <Text style={{fontSize:25 ,color:'white',alignSelf:'center',fontFamily:'Cairo-Bold',marginBottom:30}}>تواصل معنا   </Text>
-            </View>
+  return (
+    <View style={[styles.container, {width: width, height: height}]}>
+      <View style={styles.parent}>
+        <View style={styles.child}>
+          <Text style={styles.titleStyle}>تواصل معنا </Text>
         </View>
-  {/* <ImageBackground source={images.image} style={{width:width,height:140,justifyContent:"flex-end",alignItems:'center',paddingBottom:30}}>
-        <Text style={{fontSize:25 ,color:'white',alignSelf:'center',fontFamily:'Cairo-Bold'}}>تواصل معنا   </Text>
-        </ImageBackground> */}
+      </View>
 
-<ScrollView style={{paddingBottom:40}}>
-
-          <View style={{paddingVertical:10,marginTop:20,width:"100%",lexDirection:'row',justifyContent:'center',alignItems:'center',marginTop:180}}>
-            <Image source={images.ren} style={{width:220,height:220}}/>
-          </View>
-          <View style={{paddingVertical:15,marginTop:35,paddingHorizontal:20,width:'100%',flexDirection:'row',justifyContent:'flex-end'}}>
-            <Text style={{fontSize:25,fontWeight:'500'}}> تواصل معنا علي : </Text>
-          </View> 
-          <View style={{paddingVertical:5,marginTop:5,paddingHorizontal:20,width:'100%',flexDirection:'row',justifyContent:'flex-end'}}>
-          <Text style={{fontSize:18,textDecorationLine:'underline'}}>infa@afaa8.com</Text>
-          </View>
-          <View style={{paddingVertical:5,marginTop:5,paddingHorizontal:20,width:'100%',flexDirection:'row',justifyContent:'flex-end'}}>
-          <Text style={{fontSize:18,textDecorationLine:'underline'}}>0096652709005</Text>
-          </View>
-          <View style={{paddingVertical:5,marginTop:5,paddingHorizontal:20,width:'100%',flexDirection:'row',justifyContent:'flex-end'}}>
-
-          <Text style={{fontSize:18,textDecorationLine:'underline'}}>العنوان : المملكة العربية السعودية </Text>
-          </View>
-          </ScrollView>
-
-           </View>
-        
-        
-)}
+      <ScrollView style={styles.scrollStyle}>
+        <View style={styles.imagView}>
+          <Image source={images.ren} style={styles.imSty} />
+        </View>
+        <BoxText text="تواصل معنا علي :" underlin={false} />
+        <BoxText text=" infa@afaa8.com " underlin={true} />
+        <BoxText text=" 0096652709005 " underlin={true} />
+        <BoxText text=" العنوان : المملكة العربية السعودية  " underlin={true} />
+      </ScrollView>
+    </View>
+  );
+};
 
 export default ContactScreen;
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor:"#E8E8E8",
-      marginTop: 0,
-    //   justifyContent:'center',
-      alignItems:'center',
-      paddingHorizontal:20,
-      // paddingBottom:30
-    
-    },
-    parent : {
-      height : '80%',
-      width : '100%',
-      transform : [ { scaleX : 2 } ],
-      borderBottomStartRadius : 200,
-      borderBottomEndRadius : 200,
-      overflow : 'hidden',
+  container: {
+    flex: 1,
+    backgroundColor: '#E8E8E8',
+    marginTop: 0,
+    alignItems: 'center',
+    paddingHorizontal: 20,
   },
-  child : {
-      flex : 1,
-      transform : [ { scaleX : 0.5 } ],
+  parent: {
+    height: 180,
+    width: '100%',
+    transform: [{scaleX: 2}],
+    borderBottomStartRadius: 300,
+    borderBottomEndRadius: 300,
+    overflow: 'hidden',
+    zIndex: 1,
+    position: 'absolute',
+    top: -20,
+    marginBottom: 10,
+  },
+  child: {
+    flex: 1,
+    transform: [{scaleX: 0.7}],
+    backgroundColor: '#7380a1',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+  scrollStyle: {
+    paddingBottom: 40,
+  },
+  titleStyle: {
+    fontSize: 25,
+    color: 'white',
+    alignSelf: 'center',
+    fontFamily: 'Cairo-Bold',
+    marginBottom: 30,
+  },
+  imagView: {
+    paddingVertical: 10,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 180,
+    marginBottom:30
 
-      backgroundColor : 'yellow',
-      alignItems : 'center',
-      justifyContent : 'center'
-  }
-  
-  
-  
-  
-  })
+  },
+  imSty: {
+    width: 220,
+    height: 220,
+  },
+});
