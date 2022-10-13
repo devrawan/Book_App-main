@@ -10,8 +10,8 @@ import {
   Image,
 } from 'react-native';
 import {images} from './../../constants/index';
-import ContText from '../components/ContText';
-
+//import ContText from '../components/ContText'; 
+import {ContText} from '../components/index'; 
 const AboutUsScreen = () => {
   const {height, width} = useWindowDimensions();
 

@@ -2,8 +2,6 @@ import React from 'react';
 import {
   View,
   Text,
-  Image,
-  TouchableOpacity,
   useWindowDimensions,
 } from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';

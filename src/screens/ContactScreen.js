@@ -7,9 +7,7 @@ import {
   StyleSheet,
   ScrollView,
 } from 'react-native';
-// import BoxText from '../components/BoxText';
-import {BoxText} from '../components/index';
-
+import BoxText from '../components/BoxText';
 import {images} from './../../constants/index';
 
 const ContactScreen = () => {
